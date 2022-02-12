@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Summary</title>
+</head>
+
+<body>
+
+    <!-- <p id="text"> </p>
+    <input type="text" id="inputField" placeholder="write">
+    <button type="button" id="update">Update</button>
+    <button type="button" id="" onclick="handlerJustFunction();">Click me!</button>
+    <button type="button" id="eventButton">Direct Use eventListener</button>
+    <script>
+        // Set By using function
+        function handlerJustFunction() {
+            const p = document.getElementById('text');
+            p.innerText = 'Set by using function'
+        }
+        // set by direct using addEventListener
+        document.getElementById('eventButton').addEventListener('click', function() {
+            const p = document.getElementById('text');
+            p.innerText = 'Set by direct using add Event listener'
+        });
+        // set by using input field
+        document.getElementById('update').addEventListener('click', function() {
+            const input = document.getElementById('inputField');
+            const p = document.getElementById('text');
+            p.innerText = input.value;
+            input.value = '';
+        })
+    </script> -->
+
+    <h1 id="mouseHeader">More mouse Event</h1>
+    <input type="text" id="emailField" placeholder="Write your email">
+    <button type="button" onclick="handleChangeBg();">Click me Green</button>
+    <script>
+        // set by using onclick function
+        function handleChangeBg() {
+            document.body.style.backgroundColor = 'green';
+        }
+        // set by using event
+        document.getElementById('emailField').addEventListener('keyup', function(event) {
+            console.log(event.target.value);
+        });
+        // // set by using mousemove
+        // document.getElementById('mouseHeader').addEventListener('mousemove', function() {
+        //     console.log('Mouse is moving...giving me shurshori');
+        // });
+        // // set by using mouseenter
+        // document.getElementById('mouseHeader').addEventListener('mouseenter', function() {
+        //     console.log('Mouse is entering...giving me shurshori');
+        // });
+        // set by using mouseout
+        document.getElementById('mouseHeader').addEventListener('mouseout', function() {
+            console.log('The mouse cant talk');
+        });
+        // set by using click
+        document.getElementById('mouseHeader').addEventListener('click', function() {
+            console.log('The mouse cant talk');
+        });
+    </script>
+
+
+
+
+</body>
+
+</html>
+
+</html>
