@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Common</title>
+    <link rel="shortcut icon" href="png.png" type="image/x-icon">
+</head>
+
+<body>
+
+
+    <p id="text"></p>
+    <input type="text" id="inputField" placeholder="Write your name">
+    <button type="button" id="updateBtn">Update</button>
+    <button type="button" id="btnWithFunction" onclick="handleJustFunction();">Button With Function</button>
+    <button type="button" id="DirectUsingBtn">Direct Use</button>
+    <script>
+        // Button using Function
+        function handleJustFunction() {
+            const p = document.getElementById('text');
+            p.innerText = 'Set by using Function'
+        }
+        //Button using addEventListener
+        document.getElementById('DirectUsingBtn').addEventListener('click', function() {
+            const p = document.getElementById('text');
+            p.innerText = 'Set by direct Using add Event Listener'
+        });
+        // Button using input input Field
+        document.getElementById('updateBtn').addEventListener('click', function() {
+            const input = document.getElementById('inputField');
+            const p = document.getElementById('text');
+            p.innerText = input.value;
+            input.value = '';
+        });
+    </script>
+
+
+</body>
+
+</html>
