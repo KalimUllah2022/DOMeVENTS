@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Events</title>
+    <link rel="shortcut icon" href="png.png" type="image/x-icon">
+</head>
+
+<body>
+    <h2>More Event</h2>
+    <section>
+        <h3 id="secretInfo">Very very important secret information</h3>
+        <input type="text" id="deleteConfirm" placeholder="Please type delete">
+        <button type="button" id="deleteBtn" disabled>Delete</button>
+    </section>
+    <script>
+        //Click
+        document.getElementById('deleteBtn').addEventListener('click', function() {
+            document.getElementById('secretInfo').style.display = 'none';
+        });
+        // Focus
+        document.getElementById('deleteConfirm').addEventListener('focus', function() {
+            document.body.style.backgroundColor = 'indigo';
+        });
+        // blur
+        document.getElementById('deleteConfirm').addEventListener('blur', function() {
+            document.body.style.backgroundColor = 'white';
+        });
+        // // KeyDown
+        // document.getElementById('deleteConfirm').addEventListener('keydown', function() {
+        //     const deleteField = document.getElementById('deleteConfirm');
+        //     console.log(deleteField.value);
+        // });
+        // Key Press
+        // document.getElementById('deleteConfirm').addEventListener('keypress', function() {
+        //     const deleteField = document.getElementById('deleteConfirm');
+        //     console.log(deleteField.value);
+        // });
+        // Key Up
+        document.getElementById('deleteConfirm').addEventListener('keyup', function(event) {
+            const deleteButton = document.getElementById('deleteBtn');
+            if (event.target.value == 'delete') {
+                deleteButton.removeAttribute('disabled');
+            } else {
+                deleteButton.setAttribute('disabled', true);
+            }
+        });
+        // Change
+        document.getElementById('deleteConfirm').addEventListener('change', function() {
+            const deleteField = document.getElementById('deleteConfirm');
+            console.log(deleteField.value);
+        });
+    </script>
+</body>
+
+</html>
